@@ -16,7 +16,7 @@ async function bootstrap() {
           format: winston.format.combine(
             winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }), // 날짜 형식
             winston.format.prettyPrint({ colorize: true }),
-            winston.format.label({ label: 'must-Go' }), // 프로젝트 명
+            winston.format.label({ label: 'knock-upgrade' }), // 프로젝트 명
             winston.format.printf(
               ({ level, message, label, stack, timestamp }) => {
                 let logColor
@@ -97,8 +97,8 @@ async function bootstrap() {
   app.enableCors()
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('must-Go')
-    .setDescription('The must-Go API description')
+    .setTitle('KnockKnock')
+    .setDescription('The KnockKnock API description')
     .setVersion('1.0')
     .addBearerAuth()
     .build()
